@@ -87,8 +87,8 @@ if __name__ == "__main__":
     target = np.arange(2, 7).reshape(-1, 1) / 5.0
     
     model = SimpleRNN(input_dim = 1, hidden_dim = 4, output_dim = 1)
-    for epoch in range(200):
-        loss = model.train_step(seq, target, lr = 0.01)
+    for epoch in range(1000):
+        loss = model.train_step(seq, target, lr = 0.08)
         
     print(f"Final loss: {loss:.6f}")
     preds, _ = model.forward(seq)
